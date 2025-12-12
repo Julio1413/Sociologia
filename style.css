@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(https://wallpaperaccess.com/full/3084247.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: sans-serif;
+}
+
+@font-face {
+    font-family: 'Persona5'; 
+    src: url('Persona5MenuFontPrototype-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Persona5font2'; 
+    src: url('Markin-LT-Ultra-Bold.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container{
+    width: 100%;
+}
+
+.cat{
+    display: flex;
+    align-items: center; 
+    min-height: 70vh;
+    justify-content: center;
+}
+
+.category{
+    background-color: rgba(0, 0, 0, 0.918);
+    border: 2px solid rgb(255, 255, 255);
+    transform: skew(7deg);
+    text-align: center;
+    padding: 2rem 1rem;
+    width: 60%;         
+    max-width: 800px;   
+    height: auto;
+}
+
+.category h1{
+    margin:10px 0 ;
+    font-family: 'persona5', sans-serif;
+    color: white;
+    font-size: clamp(30px, 5vw, 60px);
+    line-height: 1.2;
+}
+
+.category h1:hover{
+    animation: titulo 0.5s ease-in-out infinite;
+}
+
+.category p{
+    color: white;
+    font-size: 23px;
+    font-family: 'persona5font2';
+    margin: 20px 5px 10px 10px;
+}
+
+.category button{
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-family: 'persona5', sans-serif;
+    font-size: clamp(40px, 8vw, 70px);
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+}
+
+.category button:hover{
+    animation-name: butao;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.category input{
+    margin: 20px 0;
+    height: 50px;
+    width: 90%;
+    max-width: 400px;
+    font-family: 'persona5font2', sans-serif;
+    font-size:20px;
+    padding: 0 10px;
+    border: 2px solid #ccc;
+}
+
+.category input:focus {
+    outline: none;
+    border-color: red;
+}
+
+.sonhu{
+    border-radius: 20px;
+    background-image: url('e_WvRTzU3h8NRiSkXxtrDzSxL89fFBwXiSA-wTmvSCI.webp');
+    background-size: cover;
+    background-position: center;
+    padding-top: 2rem;
+}
+
+.sonhos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: masonry;
+    gap: 15px;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    column-count: 3;    
+    column-gap: 15px;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Persona5';
+    color: white;
+    font-size: 75px;
+    transform: rotate(-2deg);
+    text-shadow: 5px 5px 0px  rgb(0, 0, 0);
+    margin: 0 0 40px 0;
+}
+
+.sonhos p{
+    font-family: 'Persona5font2';
+    font-size: 40px;
+    padding: 15px;
+    margin: 5px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 2px 7px 3px 2px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    text-shadow: 0 3px 0px  rgb(255, 255, 255);
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.5);
+    break-inside: avoid;     
+    display: inline-block;   
+    width: 100%;
+}
+
+.sonhos p:hover{
+    animation-name: sonhos;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes butao {
+    0% { transform: skew(0deg) scale(1); }
+    50% { transform: skew(-7deg) scale(1.1); text-shadow: 0 10px 0px red; }
+    100% { transform: skew(0deg) scale(1); }
+}
+
+@keyframes titulo {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(1deg); }
+    75% { transform: rotate(-1deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes sonhos{
+    from{
+        transform: skew(7deg);
+        font-size: 40px;
+    }to{
+        transform: skew(-7deg);
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .cat {
+        min-height: 50vh; 
+    }
+
+    .category {
+        width: 95%;      
+        transform: none; 
+        padding: 1rem;
+    }
+
+    .sonhos {
+        column-count: 1;  
+    }
+}
